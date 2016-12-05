@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <time.h>
 
 int kmp(char *target, int tsize, const char *pattern, int psize);
 int *compute_prefix_function(const char *pattern, int psize);
 
 int main(int argc, const char *argv[])
 {
+	struct timespec tsp;
+	int timer = (int) tsp.tv_sec;
 	int i;
 	char *buffer = 0;
 	long length;
@@ -25,6 +27,9 @@ int main(int argc, const char *argv[])
 	i = kmp(target, strlen(target), pattern, strlen(pattern));
 	if (i >= 0)
 		printf("matched @: %.200s\n", ch + i);
+
+	clock_gettime(CLOCK_REALTIME, &tsp);
+	fprintf(stdout, "\nTotal execution time: %d nsec\n", (int) tsp.tv_nsec - timer);
 	return 0;
 }
 
