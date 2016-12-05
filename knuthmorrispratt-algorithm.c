@@ -26,7 +26,7 @@ int main(int argc, const char *argv[])
 	const char *pattern = argv[2];
 	i = kmp(target, strlen(target), pattern, strlen(pattern));
 	if (i >= 0)
-		printf("matched @: %.200s\n", ch + i);
+		printf("matched @: %.50s...\n", ch + i);
 
 	clock_gettime(CLOCK_REALTIME, &tsp);
 	fprintf(stdout, "\nTotal execution time: %d nsec\n", (int) tsp.tv_nsec - timer);
