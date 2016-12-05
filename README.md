@@ -6,7 +6,7 @@ ANSI C and Golang - Knuth Morris Pratt Algorithm
 
 ## Result
 <pre>
-matched @: anation of thinkers_.+Those who want an example of the general scheme of epicycles taken from+the history of art need only look at the School of Sculpture whichflourished in the last century under Ber
+matched @: anation of thinkers_.+Those who want an example of...
 
-Total execution time: 960751123 nsec
+Total execution time: 33198264 nsec
 </pre>
